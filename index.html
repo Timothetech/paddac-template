@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PADDAC - Programme d'Appui pour le Développement Durable de l'Afrique Centrale</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- FontAwesome & Google Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ==================== HEADER À 3 ÉTAGES ==================== -->
+  <header class="header-global">
+    <!-- ÉTAGE 1 : Réseaux sociaux & Contacts rapides -->
+    <div class="topbar-social">
+      <div class="container topbar-container">
+        <div class="topbar-contact">
+          <span><i class="fa-solid fa-envelope"></i> contact@paddac-ac.org</span>
+          <span><i class="fa-solid fa-phone"></i> +237 6XX XX XX XX</span>
+        </div>
+        <div class="topbar-social-links">
+          <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ÉTAGE 2 : Bande d'Infos Flash Défilantes -->
+    <div class="flash-news-bar">
+      <div class="container flash-container">
+        <div class="flash-label"><i class="fa-solid fa-bolt"></i> INFOS FLASH</div>
+        <div class="flash-ticker">
+          <div class="flash-ticker-wrapper" id="flashTicker">
+            <span class="flash-item"><i class="fa-solid fa-bullhorn"></i> Lancement du Business Plan IAAC 2026 : 510 000 hectares d'exploitation.</span>
+            <span class="flash-item"><i class="fa-solid fa-user-check"></i> Campagne de mise à jour de l'Annuaire Officiel des Membres Pionniers.</span>
+            <span class="flash-item"><i class="fa-solid fa-handshake"></i> Ouverture des candidatures pour les partenariats agropastoraux régionaux.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ÉTAGE 3 : Navbar Fixe au Scroll avec sous-menus -->
+    <nav class="navbar" id="mainNavbar">
+      <div class="container nav-container">
+        <!-- Logo PADDAC -->
+        <a href="#accueil" class="logo-container">
+          <div class="logo-icon"><i class="fa-solid fa-earth-africa"></i></div>
+          <div class="logo-text">
+            <span class="brand-title">PADDAC</span>
+            <span class="brand-sub">Afrique Centrale</span>
+          </div>
+        </a>
+
+        <!-- Menu de Navigation avec sous-menus -->
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#accueil" class="active">Accueil</a></li>
+          
+          <li class="dropdown">
+            <a href="#a-propos">Institutionnel <i class="fa-solid fa-chevron-down drop-icon"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="#a-propos"><i class="fa-solid fa-circle-info"></i> Vision & Mission</a></li>
+              <li><a href="#message-institutionnel"><i class="fa-solid fa-quote-left"></i> Message Institutionnel</a></li>
+              <li><a href="#secteurs"><i class="fa-solid fa-layer-group"></i> Secteurs d'Intervention</a></li>
+              <li><a href="#organigramme"><i class="fa-solid fa-sitemap"></i> Organisation & Commissions</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#projets" class="highlight-link">Projets & Action <i class="fa-solid fa-chevron-down drop-icon"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="#iaac"><i class="fa-solid fa-wheat-awn"></i> Projet Mégastructure IAAC</a></li>
+              <li><a href="#projets"><i class="fa-solid fa-diagram-project"></i> Grands Projets Régionaux</a></li>
+              <li><a href="#realisations"><i class="fa-solid fa-circle-check"></i> Nos Réalisations</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#actualites">Publications <i class="fa-solid fa-chevron-down drop-icon"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="#actualites"><i class="fa-solid fa-newspaper"></i> Dernières Actualités</a></li>
+              <li><a href="#annonces"><i class="fa-solid fa-bullhorn"></i> Annonces & Communiqués</a></li>
+              <li><a href="#documents"><i class="fa-solid fa-file-pdf"></i> Bibliothèque de Documents</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#partenaires">Partenaires</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <!-- Actions Directes -->
+        <div class="nav-actions">
+          <a href="#adhesion" class="btn btn-gold-sm"><i class="fa-solid fa-user-plus"></i> Adhérer</a>
+          <button class="btn btn-primary-sm" id="openAuthModal"><i class="fa-solid fa-lock"></i> Connexion</button>
+          <div class="burger" id="burgerMenu">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==================== SECTION HERO CAROUSEL ==================== -->
+<section id="accueil" class="hero-carousel-section">
+  <div class="hero-slider" id="heroSlider">
+    
+    <!-- SLIDE 1 : Vision & Vidéo Background -->
+    <div class="hero-slide active">
+      <div class="hero-video-bg">
+        <video autoplay loop muted playsinline poster="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=80">
+          <source src="https://assets.mixkit.co/videos/preview/mixkit-large-farm-field-with-crops-40916-large.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="container hero-container">
+        <div class="hero-content">
+          <span class="badge-hero"><i class="fa-solid fa-shield-halved"></i> Plateforme Numérique Institutionnelle</span>
+          <h1>Programme d’Appui pour le Développement Durable de l'Afrique Centrale</h1>
+          <p class="hero-vision"><strong>Notre Vision :</strong> Bâtir une Afrique Centrale souveraine, intégrée et prospère à travers la transformation agropastorale, l'emploi décent et le développement durable.</p>
+          <div class="hero-buttons">
+            <a href="#adhesion" class="btn btn-gold"><i class="fa-solid fa-user-plus"></i> Adhésion Directe</a>
+            <button class="btn btn-outline" id="playVideoBtn"><i class="fa-solid fa-circle-play"></i> Vidéo Institutionnelle</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 2 : Actualités Dynamiques -->
+    <div class="hero-slide bg-slide" style="background-image: url('https://images.unsplash.com/photo-1595838772220-33b006cf4525?auto=format&fit=crop&w=1600&q=80');">
+      <div class="hero-overlay"></div>
+      <div class="container hero-container">
+        <div class="hero-content">
+          <span class="badge-hero"><i class="fa-solid fa-newspaper"></i> Information en continu</span>
+          <h2>Dernières Actualités du PADDAC</h2>
+          <div class="hero-cards-grid">
+            <div class="hero-card">
+              <span class="hero-card-date"><i class="fa-regular fa-calendar"></i> 15 Août 2026</span>
+              <h4>Validation du Plan Stratégique IAAC</h4>
+              <p>Entérinement de la cartographie des 4 grands pôles industriels agropastoraux.</p>
+            </div>
+            <div class="hero-card">
+              <span class="hero-card-date"><i class="fa-regular fa-calendar"></i> 02 Août 2026</span>
+              <h4>Campagne d'Adhésion des Membres</h4>
+              <p>Mise en place de la procédure d'enregistrement en ligne pour les souscripteurs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 3 : Grands Projets (IAAC) -->
+    <div class="hero-slide bg-slide" style="background-image: url('https://images.unsplash.com/photo-1586771107445-d3ca888129ff?auto=format&fit=crop&w=1600&q=80');">
+      <div class="hero-overlay"></div>
+      <div class="container hero-container">
+        <div class="hero-content">
+          <span class="badge-hero"><i class="fa-solid fa-diagram-project"></i> Initiatives Majeures</span>
+          <h2>Mégastructure Agropastorale IAAC</h2>
+          <p class="hero-subtitle">Budget consolidé de <strong>1 969,8 Mds FCFA</strong> pour l'Afrique Centrale.</p>
+          <div class="hero-stats-mini">
+            <div class="mini-stat"><strong>510 000 Ha</strong> Exploités</div>
+            <div class="mini-stat"><strong>102</strong> Unités Prod.</div>
+            <div class="mini-stat"><strong>24 544</strong> Logements BTS</div>
+          </div>
+          <a href="#projets" class="btn btn-gold margin-top-15"><i class="fa-solid fa-arrow-right"></i> Explorer les Projets</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 4 : Réalisations majeures -->
+    <div class="hero-slide bg-slide" style="background-image: url('https://images.unsplash.com/photo-1574943320219-553eb213f72d?auto=format&fit=crop&w=1600&q=80');">
+      <div class="hero-overlay"></div>
+      <div class="container hero-container">
+        <div class="hero-content">
+          <span class="badge-hero"><i class="fa-solid fa-circle-check"></i> Impact Terrain</span>
+          <h2>Nos Réalisations Concrètes</h2>
+          <div class="hero-cards-grid">
+            <div class="hero-card">
+              <i class="fa-solid fa-file-signature card-icon-gold"></i>
+              <h4>Business Plan IAAC 2026</h4>
+              <p>Étude technique et financière entièrement validée pour l'exploitation régionale.</p>
+            </div>
+            <div class="hero-card">
+              <i class="fa-solid fa-sitemap card-icon-gold"></i>
+              <h4>Commissions Techniques</h4>
+              <p>Mise en place opérationnelle des secrétariats et comités d'experts régionaulx.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 5 : Annonces Importantes -->
+    <div class="hero-slide bg-slide" style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80');">
+      <div class="hero-overlay"></div>
+      <div class="container hero-container">
+        <div class="hero-content">
+          <span class="badge-hero"><i class="fa-solid fa-bullhorn"></i> Communiqués Officiels</span>
+          <h2>Annonces & Appels à Manifestation</h2>
+          <div class="hero-announcement-box">
+            <i class="fa-solid fa-bell announcement-icon"></i>
+            <div>
+              <h4>Appel aux Fournisseurs d'Équipements Agropastoraux</h4>
+              <p>Ouverture des soumissions pour l’équipement des 102 unités de production régionales.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 6 : Partenaires Institutionnels -->
+    <div class="hero-slide bg-slide" style="background-image: url('https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1600&q=80');">
+      <div class="hero-overlay"></div>
+      <div class="container hero-container">
+        <div class="hero-content">
+          <span class="badge-hero"><i class="fa-solid fa-handshake"></i> Coopération & Synergies</span>
+          <h2>Un Écosystème de Partenaires Solides</h2>
+          <div class="hero-partners-grid">
+            <div class="partner-badge-hero"><i class="fa-solid fa-building-columns"></i> Institutions Régionales</div>
+            <div class="partner-badge-hero"><i class="fa-solid fa-globe"></i> Bailleurs Techniques</div>
+            <div class="partner-badge-hero"><i class="fa-solid fa-industry"></i> Groupements Agropastoraux</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Commandes du Slider (Flèches & Points) -->
+  <button class="slide-nav prev" id="slidePrev"><i class="fa-solid fa-chevron-left"></i></button>
+  <button class="slide-nav next" id="slideNext"><i class="fa-solid fa-chevron-right"></i></button>
+  
+  <div class="slider-dots" id="sliderDots"></div>
+</section>
+
+<!-- MODAL VIDÉO INSTITUTIONNELLE ENRICHIE -->
+<div class="modal" id="videoModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-circle-play"></i> Vidéo Institutionnelle PADDAC</h3>
+        <span class="close-modal" id="closeVideoModal">&times;</span>
+      </div>
+      <div class="modal-body">
+        <div class="video-responsive-wrapper">
+          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Vidéo PADDAC" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- ==================== PRINCIPAUX CHIFFRES CLÉS ==================== -->
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-header">
+      <span class="subtitle-gold"><i class="fa-solid fa-chart-line"></i> Impact & Envergure</span>
+      <h2>Les Chiffres Clés du Programme</h2>
+      <div class="header-line"></div>
+    </div>
+
+    <div class="stats-grid">
+      
+      <!-- Stat 1 -->
+      <div class="stat-card">
+        <div class="stat-icon-wrapper">
+          <i class="fa-solid fa-map-location-dot"></i>
+        </div>
+        <div class="stat-content">
+          <div class="stat-value">
+            <span class="stat-number" data-target="510000">0</span>
+            <span class="stat-unit">Ha</span>
+          </div>
+          <p class="stat-label">Hectares Exploités (IAAC)</p>
+        </div>
+      </div>
+
+      <!-- Stat 2 -->
+      <div class="stat-card">
+        <div class="stat-icon-wrapper">
+          <i class="fa-solid fa-boxes-packing"></i>
+        </div>
+        <div class="stat-content">
+          <div class="stat-value">
+            <span class="stat-number" data-target="102">0</span>
+          </div>
+          <p class="stat-label">Unités de Production</p>
+        </div>
+      </div>
+
+      <!-- Stat 3 -->
+      <div class="stat-card">
+        <div class="stat-icon-wrapper">
+          <i class="fa-solid fa-users-gear"></i>
+        </div>
+        <div class="stat-content">
+          <div class="stat-value">
+            <span class="stat-number" data-target="24544">0</span>
+          </div>
+          <p class="stat-label">Logements Personnel BTS</p>
+        </div>
+      </div>
+
+      <!-- Stat 4 -->
+      <div class="stat-card highlight">
+        <div class="stat-icon-wrapper">
+          <i class="fa-solid fa-coins"></i>
+        </div>
+        <div class="stat-content">
+          <div class="stat-value">
+            <span class="stat-text">1 969,8</span>
+            <span class="stat-unit">Mds</span>
+          </div>
+          <p class="stat-label">Budget Global FCFA (IAAC)</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- ==================== MESSAGE INSTITUTIONNEL ==================== -->
+<section id="message-institutionnel" class="section message-section">
+  <div class="container">
+    <div class="message-wrapper">
+      
+      <!-- Élément Visuel / Portrait -->
+      <div class="message-author-card">
+        <div class="author-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80" alt="Coordination Générale du PADDAC" class="author-img">
+          <div class="author-badge">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+        </div>
+        <div class="author-info">
+          <h3>Coordination Générale</h3>
+          <span class="author-role">PADDAC Afrique Centrale</span>
+        </div>
+      </div>
+
+      <!-- Contenu du Message -->
+      <div class="message-content-card">
+        <div class="quote-watermark"><i class="fa-solid fa-quote-right"></i></div>
+        
+        <div class="message-header-inline">
+          <span class="subtitle-gold"><i class="fa-solid fa-bullhorn"></i> Engagement Stratégique</span>
+          <h2>Message Institutionnel</h2>
+          <div class="title-accent-bar"></div>
+        </div>
+
+        <blockquote class="message-text">
+          « Le PADDAC s'engage résolument à faire converger les <strong>énergies institutionnelles</strong>, les <strong>compétences techniques</strong> et les <strong>opportunités d'investissement</strong> pour relever les défis majeurs de notre sous-région. Notre ambition dépasse la simple assistance : nous structurons des écosystèmes productifs durables, générateurs d'emplois pour la jeunesse et garants de la sécurité alimentaire globale. »
+        </blockquote>
+
+        <!-- Points d'impacts sous forme d'étiquettes -->
+        <div class="message-highlights">
+          <div class="highlight-item">
+            <i class="fa-solid fa-seedling"></i>
+            <span>Souveraineté Alimentaire</span>
+          </div>
+          <div class="highlight-item">
+            <i class="fa-solid fa-briefcase"></i>
+            <span>Emploi Décent & Jeunesse</span>
+          </div>
+          <div class="highlight-item">
+            <i class="fa-solid fa-chart-line"></i>
+            <span>Écosystèmes Durables</span>
+          </div>
+        </div>
+
+        <!-- Signature -->
+        <div class="message-footer">
+          <div class="signature-block">
+            <span class="signature-title">La Coordination Générale du PADDAC</span>
+            <div class="signature-line"></div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== VITRINE PRODUITS & MARKETPLACE ==================== -->
+<section id="produits-marketplace" class="section products-section">
+  <div class="container">
+    
+    <div class="section-title text-center light">
+      <span class="subtitle-gold"><i class="fa-solid fa-store"></i> Écosystème Marchand</span>
+      <h2>Nos Produits & Extrants Agropastoraux</h2>
+      <div class="header-line"></div>
+      <p class="section-description-light">
+        Découvrez les produits issus des unités de production du PADDAC : de la récolte brute aux produits transformés de haute qualité.
+      </p>
+    </div>
+
+    <!-- CARROUSEL / SLIDER DE PRODUITS -->
+    <div class="products-slider-wrapper">
+      <button class="slide-btn prev-btn" id="prevProductBtn" aria-label="Précédent">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+
+      <div class="products-slider-container" id="productsSlider">
+        
+        <!-- Produit 1 -->
+        <div class="product-card">
+          <div class="product-badge promo">-10%</div>
+          <div class="product-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=600&q=80" alt="Farine de Maïs" class="product-img">
+            <button class="quick-view-btn" onclick="openProductModal('Maïs Extra Pur', '2 500 FCFA', 'Farine de maïs de première qualité issue des récoltes régionales, idéale pour la consommation et la transformation.', 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=600&q=80', 'En Stock (Sac 25kg)')">
+              <i class="fa-solid fa-eye"></i> Aperçu Rapide
+            </button>
+          </div>
+          <div class="product-content">
+            <span class="product-category">Transformation / Céréales</span>
+            <h4 class="product-title">Farine de Maïs Extra Pur (25kg)</h4>
+            <div class="product-price">
+              <span class="price-current">2 500 FCFA</span>
+              <span class="price-old">2 800 FCFA</span>
+            </div>
+            <div class="product-actions">
+              <button class="btn-buy" onclick="openProductModal('Farine de Maïs Extra Pur', '2 500 FCFA', 'Farine de maïs de première qualité issue des récoltes régionales.', 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=600&q=80', 'En Stock')">
+                <i class="fa-solid fa-cart-shopping"></i> Commander
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produit 2 -->
+        <div class="product-card">
+          <div class="product-badge bio">Bio PADDAC</div>
+          <div class="product-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=600&q=80" alt="Poisson Frais Tilapia" class="product-img">
+            <button class="quick-view-btn" onclick="openProductModal('Tilapia Frais d\'Étang', '3 000 FCFA / kg', 'Tilapia de pisciculture élevés dans les étangs aménagés du PADDAC. Poissons frais calibrés et nourris aux aliments locaux.', 'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=600&q=80', 'Disponible sur commande')">
+              <i class="fa-solid fa-eye"></i> Aperçu Rapide
+            </button>
+          </div>
+          <div class="product-content">
+            <span class="product-category">Pisciculture</span>
+            <h4 class="product-title">Tilapia Frais d'Étang (Kg)</h4>
+            <div class="product-price">
+              <span class="price-current">3 000 FCFA</span>
+            </div>
+            <div class="product-actions">
+              <button class="btn-buy" onclick="openProductModal('Tilapia Frais d\'Étang', '3 000 FCFA / kg', 'Tilapia de pisciculture élevés dans les étangs aménagés du PADDAC.', 'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=600&q=80', 'Disponible')">
+                <i class="fa-solid fa-cart-shopping"></i> Commander
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produit 3 -->
+        <div class="product-card">
+          <div class="product-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1589927986089-35812388d1f4?auto=format&fit=crop&w=600&q=80" alt="Aliment Volaille" class="product-img">
+            <button class="quick-view-btn" onclick="openProductModal('Aliment Poussin Démarrage', '18 500 FCFA', 'Sac d\'aliment complet pour poussins enrichi en protéines végétales et minéraux essentiels.', 'https://images.unsplash.com/photo-1589927986089-35812388d1f4?auto=format&fit=crop&w=600&q=80', 'En Stock (Sac 50kg)')">
+              <i class="fa-solid fa-eye"></i> Aperçu Rapide
+            </button>
+          </div>
+          <div class="product-content">
+            <span class="product-category">Élevage / Aliments</span>
+            <h4 class="product-title">Aliment Volaille Démarrage (50kg)</h4>
+            <div class="product-price">
+              <span class="price-current">18 500 FCFA</span>
+            </div>
+            <div class="product-actions">
+              <button class="btn-buy" onclick="openProductModal('Aliment Volaille Démarrage', '18 500 FCFA', 'Sac d\'aliment complet pour poussins enrichi.', 'https://images.unsplash.com/photo-1589927986089-35812388d1f4?auto=format&fit=crop&w=600&q=80', 'En Stock')">
+                <i class="fa-solid fa-cart-shopping"></i> Commander
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produit 4 -->
+        <div class="product-card">
+          <div class="product-badge star">Top Vente</div>
+          <div class="product-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1608686207856-001b95cf60ca?auto=format&fit=crop&w=600&q=80" alt="Miel Pur Naturel" class="product-img">
+            <button class="quick-view-btn" onclick="openProductModal('Miel Pur d\'Apiculture', '4 500 FCFA', 'Miel 100% naturel récolté dans les zones forestières du projet. Sans conservateurs ni additifs.', 'https://images.unsplash.com/photo-1608686207856-001b95cf60ca?auto=format&fit=crop&w=600&q=80', 'Stock Limité')">
+              <i class="fa-solid fa-eye"></i> Aperçu Rapide
+            </button>
+          </div>
+          <div class="product-content">
+            <span class="product-category">Apiculture</span>
+            <h4 class="product-title">Miel Pur Naturel (Bocal 1L)</h4>
+            <div class="product-price">
+              <span class="price-current">4 500 FCFA</span>
+            </div>
+            <div class="product-actions">
+              <button class="btn-buy" onclick="openProductModal('Miel Pur d\'Apiculture', '4 500 FCFA', 'Miel 100% naturel récolté dans les zones forestières.', 'https://images.unsplash.com/photo-1608686207856-001b95cf60ca?auto=format&fit=crop&w=600&q=80', 'Stock Limité')">
+                <i class="fa-solid fa-cart-shopping"></i> Commander
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produit 5 -->
+        <div class="product-card">
+          <div class="product-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&w=600&q=80" alt="Huile de Palme" class="product-img">
+            <button class="quick-view-btn" onclick="openProductModal('Huile de Palme Raffinée', '12 000 FCFA', 'Bidon de 5L d\'huile purifiée et clarifiée issue des palmeraies affiliées au PADDAC.', 'https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&w=600&q=80', 'En Stock (Bidon 5L)')">
+              <i class="fa-solid fa-eye"></i> Aperçu Rapide
+            </button>
+          </div>
+          <div class="product-content">
+            <span class="product-category">Agro-industrie</span>
+            <h4 class="product-title">Huile de Palme Purifiée (5L)</h4>
+            <div class="product-price">
+              <span class="price-current">12 000 FCFA</span>
+            </div>
+            <div class="product-actions">
+              <button class="btn-buy" onclick="openProductModal('Huile de Palme Purifiée', '12 000 FCFA', 'Bidon de 5L d\'huile purifiée et clarifiée.', 'https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&w=600&q=80', 'En Stock')">
+                <i class="fa-solid fa-cart-shopping"></i> Commander
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produit 6 -->
+        <div class="product-card">
+          <div class="product-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1563636619-e9143da7973b?auto=format&fit=crop&w=600&q=80" alt="Poulet de Chair" class="product-img">
+            <button class="quick-view-btn" onclick="openProductModal('Poulet de Chair PADDAC', '3 500 FCFA', 'Poulet élevé aux grains naturels dans les fermes pilotes PADDAC. Poids moyen 2.2 kg.', 'https://images.unsplash.com/photo-1563636619-e9143da7973b?auto=format&fit=crop&w=600&q=80', 'Disponible')">
+              <i class="fa-solid fa-eye"></i> Aperçu Rapide
+            </button>
+          </div>
+          <div class="product-content">
+            <span class="product-category">Aviculture</span>
+            <h4 class="product-title">Poulet de Chair Prêt à Cuire</h4>
+            <div class="product-price">
+              <span class="price-current">3 500 FCFA</span>
+            </div>
+            <div class="product-actions">
+              <button class="btn-buy" onclick="openProductModal('Poulet de Chair PADDAC', '3 500 FCFA', 'Poulet élevé aux grains naturels.', 'https://images.unsplash.com/photo-1563636619-e9143da7973b?auto=format&fit=crop&w=600&q=80', 'Disponible')">
+                <i class="fa-solid fa-cart-shopping"></i> Commander
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produit 7 -->
+        <div class="product-card">
+          <div class="product-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=600&q=80" alt="Riz Local" class="product-img">
+            <button class="quick-view-btn" onclick="openProductModal('Riz Blanc Parfumé', '15 000 FCFA', 'Sac de 25kg de riz parfumé récolté et décortiqué dans les rizeries partenaires.', 'https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=600&q=80', 'En Stock')">
+              <i class="fa-solid fa-eye"></i> Aperçu Rapide
+            </button>
+          </div>
+          <div class="product-content">
+            <span class="product-category">Céréales</span>
+            <h4 class="product-title">Riz Parfumé Local (25kg)</h4>
+            <div class="product-price">
+              <span class="price-current">15 000 FCFA</span>
+            </div>
+            <div class="product-actions">
+              <button class="btn-buy" onclick="openProductModal('Riz Blanc Parfumé', '15 000 FCFA', 'Sac de 25kg de riz parfumé récolté et décortiqué.', 'https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=600&q=80', 'En Stock')">
+                <i class="fa-solid fa-cart-shopping"></i> Commander
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produit 8 -->
+        <div class="product-card">
+          <div class="product-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1598170845058-12ef4a457511?auto=format&fit=crop&w=600&q=80" alt="Manioc Transformé" class="product-img">
+            <button class="quick-view-btn" onclick="openProductModal('Bâton de Manioc Supérieur', '1 000 FCFA / Paquet', 'Paquet de 10 bâtons de manioc soigneusement préparés selon les normes d\'hygiène.', 'https://images.unsplash.com/photo-1598170845058-12ef4a457511?auto=format&fit=crop&w=600&q=80', 'Disponible')">
+              <i class="fa-solid fa-eye"></i> Aperçu Rapide
+            </button>
+          </div>
+          <div class="product-content">
+            <span class="product-category">Vivres Frais</span>
+            <h4 class="product-title">Bâtons de Manioc (Lot de 10)</h4>
+            <div class="product-price">
+              <span class="price-current">1 000 FCFA</span>
+            </div>
+            <div class="product-actions">
+              <button class="btn-buy" onclick="openProductModal('Bâton de Manioc Supérieur', '1 000 FCFA', 'Paquet de 10 bâtons de manioc.', 'https://images.unsplash.com/photo-1598170845058-12ef4a457511?auto=format&fit=crop&w=600&q=80', 'Disponible')">
+                <i class="fa-solid fa-cart-shopping"></i> Commander
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produit 9 -->
+        <div class="product-card">
+          <div class="product-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?auto=format&fit=crop&w=600&q=80" alt="Engrais Bio" class="product-img">
+            <button class="quick-view-btn" onclick="openProductModal('Compost Organique Bio', '8 000 FCFA', 'Sac de 50kg d\'engrais biologique produit à partir du recyclage des sous-produits d\'élevage.', 'https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?auto=format&fit=crop&w=600&q=80', 'En Stock')">
+              <i class="fa-solid fa-eye"></i> Aperçu Rapide
+            </button>
+          </div>
+          <div class="product-content">
+            <span class="product-category">Intrants Agricoles</span>
+            <h4 class="product-title">Engrais Bio / Compost (50kg)</h4>
+            <div class="product-price">
+              <span class="price-current">8 000 FCFA</span>
+            </div>
+            <div class="product-actions">
+              <button class="btn-buy" onclick="openProductModal('Compost Organique Bio', '8 000 FCFA', 'Sac de 50kg d\'engrais biologique.', 'https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?auto=format&fit=crop&w=600&q=80', 'En Stock')">
+                <i class="fa-solid fa-cart-shopping"></i> Commander
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produit 10 -->
+        <div class="product-card">
+          <div class="product-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=600&q=80" alt="Banane Plantain" class="product-img">
+            <button class="quick-view-btn" onclick="openProductModal('Régime de Plantain Extra', '4 000 FCFA', 'Régimes de bananes plantains récoltés mûrs ou verts au choix dans nos bassins agricoles.', 'https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=600&q=80', 'En Stock')">
+              <i class="fa-solid fa-eye"></i> Aperçu Rapide
+            </button>
+          </div>
+          <div class="product-content">
+            <span class="product-category">Cultures Fruitières</span>
+            <h4 class="product-title">Régime de Banane Plantain Extra</h4>
+            <div class="product-price">
+              <span class="price-current">4 000 FCFA</span>
+            </div>
+            <div class="product-actions">
+              <button class="btn-buy" onclick="openProductModal('Régime de Plantain Extra', '4 000 FCFA', 'Régimes de bananes plantains récoltés.', 'https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=600&q=80', 'En Stock')">
+                <i class="fa-solid fa-cart-shopping"></i> Commander
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="slide-btn next-btn" id="nextProductBtn" aria-label="Suivant">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+
+    <!-- BOUTON ACCÈS À TOUTE LA BOUTIQUE -->
+    <div class="products-footer-action text-center">
+      <a href="boutique.html" class="btn btn-gold-solid">
+        <i class="fa-solid fa-bag-shopping"></i> Explorer Toute La Marketplace (E-Commerce)
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- FENÊTRE MODALE DÉTAILS PRODUIT -->
+<div class="product-modal" id="productModal">
+  <div class="modal-overlay" onclick="closeProductModal()"></div>
+  <div class="modal-card">
+    <button class="modal-close" onclick="closeProductModal()">&times;</button>
+    <div class="modal-body">
+      <div class="modal-img-container">
+        <img id="modalProductImg" src="" alt="Produit">
+      </div>
+      <div class="modal-info">
+        <span class="modal-stock-badge" id="modalProductStock">En Stock</span>
+        <h3 id="modalProductTitle">Titre du Produit</h3>
+        <div class="modal-price" id="modalProductPrice">0 FCFA</div>
+        <p class="modal-desc" id="modalProductDesc">Description détaillée du produit...</p>
+        <div class="modal-cta">
+          <a href="#" id="modalOrderBtn" class="btn btn-primary btn-block">
+            <i class="fa-solid fa-paper-plane"></i> Finaliser la commande via WhatsApp / Mobile
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- ==================== SECTEURS D'INTERVENTION ==================== -->
+  <section id="secteurs" class="section">
+    <div class="container">
+      <div class="section-title">
+        <span class="subtitle">Domaines d'Action</span>
+        <h2>Secteurs d'Intervention Prioritaires</h2>
+      </div>
+      <div class="cards-grid">
+        <div class="card-item">
+          <i class="fa-solid fa-wheat-awn card-icon"></i>
+          <h3>Agriculture & Agropastoral</h3>
+          <p>Modernisation des cultures, développement des filières végétales et animales à haute valeur ajoutée.</p>
+        </div>
+        <div class="card-item">
+          <i class="fa-solid fa-fish card-icon"></i>
+          <h3>Pisciculture & Aquaculture</h3>
+          <p>Aménagement d'étangs industriels et production d'aliments aquacoles locaux.</p>
+        </div>
+        <div class="card-item">
+          <i class="fa-solid fa-industry card-icon"></i>
+          <h3>Industrialisation & Transformation</h3>
+          <p>Création d'usines de transformation locale, d'abattoirs frigorifiques et de hubs logistiques.</p>
+        </div>
+        <div class="card-item">
+          <i class="fa-solid fa-city card-icon"></i>
+          <h3>Infrastructures & Logement</h3>
+          <p>Construction de villages agricoles, logements sociaux BTS, complexes scolaires et sanitaires.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- ==================== PRINCIPAUX PROJETS (AVEC FOCUS IAAC) ==================== -->
+<section id="projets" class="section projects-section">
+  <div class="container">
+    
+    <div class="section-title text-center light">
+      <span class="subtitle-gold"><i class="fa-solid fa-diagram-project"></i> Portfolio Stratégique</span>
+      <h2>Nos Projets Structurants</h2>
+      <div class="header-line"></div>
+    </div>
+
+    <!-- CARTE VEDETTE : PROJET IAAC 2026 -->
+    <div class="iaac-focus-card">
+      <div class="iaac-card-overlay"></div>
+      <div class="iaac-content-wrapper">
+        <div class="iaac-header-top">
+          <span class="badge-gold-filled"><i class="fa-solid fa-star"></i> Projet Phare 2026</span>
+          <span class="iaac-budget">Budget Consolidé : <strong>1 969,8 Mds FCFA</strong></span>
+        </div>
+
+        <div class="iaac-body">
+          <h3>Industrie Agropastorale de l’Afrique Centrale (IAAC)</h3>
+          <p class="iaac-description">
+            Programme d'envergure régionale visant la souveraineté alimentaire de la sous-région à travers l'industrialisation agropastorale, la création d'emplois massifs et la structuration des chaînes de valeur.
+          </p>
+
+          <div class="iaac-details-grid">
+            <div class="iaac-mini-box">
+              <i class="fa-solid fa-vector-square"></i>
+              <div>
+                <strong>510 000 Ha</strong>
+                <span>Exploités</span>
+              </div>
+            </div>
+            <div class="iaac-mini-box">
+              <i class="fa-solid fa-gears"></i>
+              <div>
+                <strong>102</strong>
+                <span>Unités de Prod.</span>
+              </div>
+            </div>
+            <div class="iaac-mini-box">
+              <i class="fa-solid fa-house-user"></i>
+              <div>
+                <strong>24 544</strong>
+                <span>Logements BTS</span>
+              </div>
+            </div>
+            <div class="iaac-mini-box">
+              <i class="fa-solid fa-industry"></i>
+              <div>
+                <strong>8 Usines</strong>
+                <span>& 4 Abattoirs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="iaac-footer">
+          <a href="projets-iaac.html" class="btn btn-gold"><i class="fa-solid fa-circle-info"></i> Découvrir l'IAAC en détail</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- AUTRES PROJETS D'ENVERGURE -->
+    <div class="other-projects-grid">
+      
+      <!-- Projet 2 -->
+      <div class="project-card">
+        <div class="project-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="Infrastructures & Route">
+          <span class="project-category">Infrastructures</span>
+        </div>
+        <div class="project-content">
+          <h4>Routes Rurales & Corridors Logistiques</h4>
+          <p>Désenclavements des bassins de production et interconnexion des marchés transfrontaliers.</p>
+          <a href="projets-infrastructures.html" class="project-link">En savoir plus <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Projet 3 -->
+      <div class="project-card">
+        <div class="project-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1534951009808-7d6105b129c7?auto=format&fit=crop&w=800&q=80" alt="Aquaculture et Pêche">
+          <span class="project-category">Pêche & Aquaculture</span>
+        </div>
+        <div class="project-content">
+          <h4>Pôles Aquacoles Sous-Régionaux</h4>
+          <p>Modernisation des équipements de pêche continentale et création de fermes aquacoles géantes.</p>
+          <a href="projets-aquaculture.html" class="project-link">En savoir plus <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Projet 4 -->
+      <div class="project-card">
+        <div class="project-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1509391365360-2e959784a276?auto=format&fit=crop&w=800&q=80" alt="Énergie Solaire">
+          <span class="project-category">Énergie Verte</span>
+        </div>
+        <div class="project-content">
+          <h4>Électrification Solaires Hors-Réseau</h4>
+          <p>Autonomisation énergétique des unités de transformation agropastorales en zones rurales.</p>
+          <a href="projets-energie.html" class="project-link">En savoir plus <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- BOUTON VERS LA PAGE CATALOGUE PROJETS -->
+    <div class="projects-action-footer text-center">
+      <a href="projets.html" class="btn btn-outline-light btn-lg">
+        <i class="fa-solid fa-layer-group"></i> Voir tous les projets du PADDAC
+      </a>
+    </div>
+
+  </div>
+</section>
+
+ <!-- ==================== DERNIÈRES ACTUALITÉS ==================== -->
+<section id="actualites" class="section news-section">
+  <div class="container">
+    
+    <div class="section-title text-center">
+      <span class="subtitle-gold"><i class="fa-solid fa-newspaper"></i> Information en continu</span>
+      <h2>Dernières Actualités</h2>
+      <div class="header-line"></div>
+    </div>
+
+    <div class="news-grid">
+      
+      <!-- Article 1 -->
+      <article class="news-card">
+        <div class="news-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1595838772220-33b006cf4525?auto=format&fit=crop&w=600&q=80" alt="Validation du Plan Stratégique">
+          <span class="news-category">Stratégie</span>
+        </div>
+        <div class="news-content">
+          <div class="news-meta">
+            <span class="news-date"><i class="fa-regular fa-calendar-days"></i> 15 Août 2026</span>
+          </div>
+          <h4 class="news-title">Validation du Plan Stratégique des Pôles Régionaux</h4>
+          <p class="news-excerpt">La Coordination Générale a entériné la cartographie des 4 grands pôles industriels agropastoraux.</p>
+          <a href="actualite-detail.html" class="news-read-more">Lire la suite <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <!-- Article 2 -->
+      <article class="news-card">
+        <div class="news-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?auto=format&fit=crop&w=600&q=80" alt="Session d'Adhésion">
+          <span class="news-category">Institutionnel</span>
+        </div>
+        <div class="news-content">
+          <div class="news-meta">
+            <span class="news-date"><i class="fa-regular fa-calendar-days"></i> 02 Août 2026</span>
+          </div>
+          <h4 class="news-title">Session d'Adhésion des Membres Actionnaires</h4>
+          <p class="news-excerpt">Mise en place de la nouvelle procédure d'enregistrement en ligne pour les souscripteurs du programme.</p>
+          <a href="actualite-detail.html" class="news-read-more">Lire la suite <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+      <!-- Article 3 -->
+      <article class="news-card">
+        <div class="news-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1530587191325-3db32d826c18?auto=format&fit=crop&w=600&q=80" alt="Coopération Internationale">
+          <span class="news-category">Partenariat</span>
+        </div>
+        <div class="news-content">
+          <div class="news-meta">
+            <span class="news-date"><i class="fa-regular fa-calendar-days"></i> 28 Juillet 2026</span>
+          </div>
+          <h4 class="news-title">Rencontre avec les Partenaires Financiers</h4>
+          <p class="news-excerpt">Table ronde avec les bailleurs sous-régionaux pour le financement des infrastructures de transformation.</p>
+          <a href="actualite-detail.html" class="news-read-more">Lire la suite <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- BOUTON D'ACCÈS À LA PAGE ACTUALITÉS -->
+    <div class="news-action-footer text-center">
+      <a href="actualites.html" class="btn btn-primary-dark">
+        <i class="fa-solid fa-newspaper"></i> Voir toutes les actualités
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================== ANNONCES IMPORTANTES ==================== -->
+<section id="annonces" class="section announcements-section">
+  <div class="container">
+    
+    <div class="section-title text-center light">
+      <span class="subtitle-gold"><i class="fa-solid fa-bullhorn"></i> Communiqués Officiels</span>
+      <h2>Annonces Importantes</h2>
+      <div class="header-line"></div>
+    </div>
+
+    <div class="announcements-wrapper">
+      
+      <!-- Annonce 1 -->
+      <div class="announcement-card priority-high">
+        <div class="announcement-status">
+          <span class="badge-urgent"><i class="fa-solid fa-triangle-exclamation"></i> URGENT</span>
+          <span class="announcement-date"><i class="fa-regular fa-clock"></i> Limite : 30 Sept. 2026</span>
+        </div>
+        <div class="announcement-body">
+          <h4>Appel à Manifestation d'Intérêt : Équipements Agropastoraux</h4>
+          <p>Le PADDAC lance un appel auprès des fournisseurs d'équipements pour la fourniture et l'aménagement des 102 unités de production du programme IAAC.</p>
+        </div>
+        <div class="announcement-actions">
+          <a href="#" class="btn-download"><i class="fa-solid fa-file-pdf"></i> Télecharger le TDR (PDF)</a>
+        </div>
+      </div>
+
+      <!-- Annonce 2 -->
+      <div class="announcement-card">
+        <div class="announcement-status">
+          <span class="badge-info"><i class="fa-solid fa-circle-info"></i> COMMUNIQUÉ</span>
+          <span class="announcement-date"><i class="fa-regular fa-calendar"></i> Publié le : 10 Août 2026</span>
+        </div>
+        <div class="announcement-body">
+          <h4>Ouverture du Guichet de Recrutement du Personnel BTS</h4>
+          <p>Lancement officiel de la campagne de présélection des techniciens et cadres pour la gestion des 24 544 logements et infrastructures associées.</p>
+        </div>
+        <div class="announcement-actions">
+          <a href="#" class="btn-download"><i class="fa-solid fa-file-pdf"></i> Consulter l'Avis (PDF)</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- BOUTON VERS LA PAGE DÉDIÉE AUX ANNONCES -->
+    <div class="announcements-action-footer text-center">
+      <a href="annonces.html" class="btn btn-gold-outline">
+        <i class="fa-solid fa-scroll"></i> Consulter toutes les annonces & avis
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================== NOS RÉALISATIONS ==================== -->
+<section id="realisations" class="section showcase-section">
+  <div class="container">
+    
+    <div class="section-title text-center">
+      <span class="subtitle-gold"><i class="fa-solid fa-camera-retro"></i> Impact sur le Terrain</span>
+      <h2>Nos Réalisations en Images & Vidéos</h2>
+      <div class="header-line"></div>
+    </div>
+
+    <!-- FILTRES INTERACTIFS -->
+    <div class="showcase-filters text-center">
+      <button class="filter-btn active" data-filter="all">Tous</button>
+      <button class="filter-btn" data-filter="infrastructures">Infrastructures</button>
+      <button class="filter-btn" data-filter="agropastoral">Agropastoral</button>
+      <button class="filter-btn" data-filter="videos"><i class="fa-solid fa-play"></i> Vidéos</button>
+    </div>
+
+    <!-- GRILLE VITRINE MULTIMÉDIA -->
+    <div class="showcase-grid">
+      
+      <!-- Carte 1 : Vidéo Immensive -->
+      <div class="showcase-card video-card" data-category="videos">
+        <div class="showcase-media">
+          <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80" alt="Présentation IAAC">
+          <div class="video-overlay">
+            <button class="play-btn" aria-label="Lancer la vidéo">
+              <i class="fa-solid fa-play"></i>
+            </button>
+            <span class="video-duration"><i class="fa-regular fa-clock"></i> 03:45</span>
+          </div>
+          <span class="media-type-badge"><i class="fa-solid fa-video"></i> Vidéo HD</span>
+        </div>
+        <div class="showcase-content">
+          <span class="showcase-tag">IAAC 2026</span>
+          <h4>Aménagement des Premieres Parcelles Agro-industrielles</h4>
+          <p>Découvrez l'avancement des travaux de préparation des sols sur les 510 000 Hectares.</p>
+        </div>
+      </div>
+
+      <!-- Carte 2 : Galerie Photo / Infrastructure -->
+      <div class="showcase-card" data-category="infrastructures">
+        <div class="showcase-media">
+          <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?auto=format&fit=crop&w=800&q=80" alt="Logements BTS">
+          <span class="media-type-badge"><i class="fa-solid fa-images"></i> Photo</span>
+        </div>
+        <div class="showcase-content">
+          <span class="showcase-tag">Infrastructures</span>
+          <h4>Complexes Résidentiels du Personnel BTS</h4>
+          <p>Construction et livraison des premiers blocs d'habitation modernes pour les techniciens.</p>
+        </div>
+      </div>
+
+      <!-- Carte 3 : Agropastoral -->
+      <div class="showcase-card" data-category="agropastoral">
+        <div class="showcase-media">
+          <img src="https://images.unsplash.com/photo-1586771107445-d3ca888129ff?auto=format&fit=crop&w=800&q=80" alt="Unités de Production">
+          <span class="media-type-badge"><i class="fa-solid fa-images"></i> Photo</span>
+        </div>
+        <div class="showcase-content">
+          <span class="showcase-tag">Production</span>
+          <h4>Unités PILOTES de Transformation Avicole</h4>
+          <p>Installation des équipements industriels de dernière génération dans les abattoirs.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- BOUTON D'ACCÈS À LA PAGE TOUTES LES RÉALISATIONS -->
+    <div class="showcase-action-footer text-center">
+      <a href="realisations.html" class="btn btn-primary-dark">
+        <i class="fa-solid fa-photo-film"></i> Explorer toutes nos réalisations
+      </a>
+    </div>
+
+  </div>
+</section>
+<!-- ==================== ACCÈS DIRECT ADHÉSION ==================== -->
+<section id="adhesion" class="section adhesion-section">
+  <div class="container">
+    
+    <div class="adhesion-wrapper">
+      
+      <!-- Colonne Information & Tarifs -->
+      <div class="adhesion-info">
+        <span class="subtitle-gold"><i class="fa-solid fa-user-plus"></i> Rejoignez le Programme</span>
+        <h2>Adhésion Membre PADDAC</h2>
+        <p class="adhesion-desc">
+          Inscrivez-vous en tant que Membre Simple ou Pionnier pour participer activement au développement du programme et bénéficier des opportunités d'investissement.
+        </p>
+
+        <div class="fee-cards">
+          <!-- Carte Membre Simple -->
+          <div class="fee-card">
+            <div class="fee-header">
+              <h4>Membre Simple</h4>
+              <span class="fee-badge">Standard</span>
+            </div>
+            <div class="price">10 000 <span>FCFA</span></div>
+            <ul class="fee-features">
+              <li><i class="fa-solid fa-check"></i> Carte de membre numérique</li>
+              <li><i class="fa-solid fa-check"></i> Accès aux rapports d'activités</li>
+            </ul>
+          </div>
+
+          <!-- Carte Membre Pionnier -->
+          <div class="fee-card featured">
+            <span class="badge-pop"><i class="fa-solid fa-crown"></i> Recommandé</span>
+            <div class="fee-header">
+              <h4>Membre Pionnier</h4>
+              <span class="fee-badge gold">Actionnaire</span>
+            </div>
+            <div class="price">50 000 <span>FCFA</span></div>
+            <ul class="fee-features">
+              <li><i class="fa-solid fa-check"></i> Tous les avantages Membre Simple</li>
+              <li><i class="fa-solid fa-check"></i> Priorité sur les souscriptions IAAC</li>
+              <li><i class="fa-solid fa-check"></i> Droits de vote aux assemblées</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Badges de paiement sécurisés -->
+        <div class="pay-trust-block">
+          <span class="pay-trust-label"><i class="fa-solid fa-shield-halved"></i> Paiement Mobile Sécurisé :</span>
+          <div class="pay-logos">
+            <span class="pay-badge om"><i class="fa-solid fa-mobile-screen-button"></i> Orange Money</span>
+            <span class="pay-badge momo"><i class="fa-solid fa-mobile-screen-button"></i> MTN MoMo</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Formulaire de souscription -->
+      <div class="adhesion-form-wrapper">
+        <form class="adhesion-form" id="adhesionForm">
+          <div class="form-header">
+            <h3>Souscription Rapide</h3>
+            <p>Remplissez vos informations pour valider votre adhésion.</p>
+          </div>
+
+          <div class="form-group">
+            <label for="membershipType">Type d'Adhésion <span class="required">*</span></label>
+            <div class="input-icon-wrapper">
+              <i class="fa-solid fa-id-card input-icon"></i>
+              <select required id="membershipType" class="form-control">
+                <option value="" disabled selected>Choisir une formule...</option>
+                <option value="SIMPLE" data-price="10000">Membre Simple (10 000 FCFA)</option>
+                <option value="PIONNIER" data-price="50000">Membre Pionnier / Actionnaire (50 000 FCFA)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="fullName">Nom & Prénom <span class="required">*</span></label>
+            <div class="input-icon-wrapper">
+              <i class="fa-solid fa-user input-icon"></i>
+              <input type="text" id="fullName" required placeholder="Ex: Jean Paul Nkoa" class="form-control">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="phoneNumber">Numéro Mobile Money <span class="required">*</span></label>
+            <div class="input-icon-wrapper">
+              <i class="fa-solid fa-phone input-icon"></i>
+              <input type="tel" id="phoneNumber" required placeholder="Ex: 6xx xxx xxx (OM / MoMo)" class="form-control">
+            </div>
+          </div>
+
+          <!-- Total Dynamique -->
+          <div class="payment-summary">
+            <span>Montant à débiter :</span>
+            <strong id="totalAmount">0 FCFA</strong>
+          </div>
+
+          <button type="submit" class="btn btn-submit-pay">
+            <i class="fa-solid fa-lock"></i> Valider et Payer via Mobile
+          </button>
+          
+          <span class="secure-notice"><i class="fa-solid fa-circle-check"></i> Notification de paiement envoyée directement sur votre téléphone.</span>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== BIBLIOTHÈQUE & DOCUMENTS ==================== -->
+<section id="documents" class="section docs-section">
+  <div class="container">
+    
+    <div class="section-title text-center light">
+      <span class="subtitle-gold"><i class="fa-solid fa-book-bookmark"></i> Ressources & Documentation</span>
+      <h2>Bibliothèque & Centre de Documentation</h2>
+      <div class="header-line"></div>
+    </div>
+
+    <!-- GRILLE DES DOCUMENTS -->
+    <div class="docs-grid">
+      
+      <!-- Carte 1 : Document à Explorer en Ligne -->
+      <div class="doc-card explore-type">
+        <div class="doc-badge-type"><i class="fa-solid fa-eye"></i> Lecture En Ligne</div>
+        <div class="doc-icon-wrapper">
+          <i class="fa-solid fa-book-open-reader doc-icon"></i>
+        </div>
+        <div class="doc-info">
+          <span class="doc-meta">Format Flipbook / PDF • 18 Pages</span>
+          <h4>Charte Institutionnelle du PADDAC</h4>
+          <p>Consultez directement le cadre juridique, la vision stratégique et les engagements éthiques du programme.</p>
+        </div>
+        <div class="doc-actions">
+          <a href="#" class="btn-doc btn-explore"><i class="fa-solid fa-book-open"></i> Feuilleter / Explorer</a>
+          <a href="#" class="btn-doc btn-download-icon" title="Télécharger le PDF"><i class="fa-solid fa-download"></i></a>
+        </div>
+      </div>
+
+      <!-- Carte 2 : Rapport Stratégique (Téléchargement & Aperçu) -->
+      <div class="doc-card featured-doc">
+        <div class="doc-badge-type gold"><i class="fa-solid fa-star"></i> Document Clé</div>
+        <div class="doc-icon-wrapper">
+          <i class="fa-solid fa-file-pdf doc-icon"></i>
+        </div>
+        <div class="doc-info">
+          <span class="doc-meta">PDF Officiel • 4.2 Mo</span>
+          <h4>Business Plan IAAC 2026 (Résumé Exécutif)</h4>
+          <p>Analyse financière, projections d'investissements agropastoraux et modèle de rentabilité du projet.</p>
+        </div>
+        <div class="doc-actions">
+          <a href="#" class="btn-doc btn-explore"><i class="fa-solid fa-circle-info"></i> Aperçu</a>
+          <a href="#" class="btn-doc btn-download"><i class="fa-solid fa-download"></i> Télécharger</a>
+        </div>
+      </div>
+
+      <!-- Carte 3 : Guide Technique & Manuel -->
+      <div class="doc-card explore-type">
+        <div class="doc-badge-type"><i class="fa-solid fa-layer-group"></i> Guide Technique</div>
+        <div class="doc-icon-wrapper">
+          <i class="fa-solid fa-file-lines doc-icon"></i>
+        </div>
+        <div class="doc-info">
+          <span class="doc-meta">Manuel Officiel • 12 Pages</span>
+          <h4>Guide du Souscripteur & Actionnaire</h4>
+          <p>Démarches et modalités d'acquisition des parts sociales pour les membres Pionniers.</p>
+        </div>
+        <div class="doc-actions">
+          <a href="#" class="btn-doc btn-explore"><i class="fa-solid fa-eye"></i> Explorer</a>
+          <a href="#" class="btn-doc btn-download-icon" title="Télécharger le PDF"><i class="fa-solid fa-download"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- BOUTON D'ACCÈS À LA PAGE TOUS LES DOCUMENTS -->
+    <div class="docs-action-footer text-center">
+      <a href="documents.html" class="btn btn-gold-outline">
+        <i class="fa-solid fa-folder-open"></i> Accéder à toute la bibliothèque documentaire
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================== NOS PARTENAIRES ==================== -->
+<section id="partenaires" class="section partners-section">
+  <div class="container">
+    
+    <div class="section-title text-center">
+      <span class="subtitle-gold"><i class="fa-solid fa-handshake-angle"></i> Coopération & Synergie</span>
+      <h2>Nos Partenaires de Confiance</h2>
+      <div class="header-line"></div>
+      <p class="section-description">
+        Un écosystème solide réunissant institutions publiques, bailleurs de fonds, experts techniques et coopératives pour la réussite du PADDAC.
+      </p>
+    </div>
+
+    <!-- GRILLE D'EXHIBITION DES PARTENAIRES -->
+    <div class="partners-grid">
+      
+      <!-- Partenaire 1 : Institutionnel -->
+      <div class="partner-card">
+        <div class="partner-badge">Institutionnel</div>
+        <div class="partner-logo-wrapper">
+          <i class="fa-solid fa-building-columns partner-icon"></i>
+        </div>
+        <div class="partner-details">
+          <h4>Institutions & Ministères</h4>
+          <p>Organismes étatiques et autorités régionales d'accompagnement.</p>
+        </div>
+      </div>
+
+      <!-- Partenaire 2 : Technique / Agro -->
+      <div class="partner-card featured-partner">
+        <div class="partner-badge gold">Technique & Agropastoral</div>
+        <div class="partner-logo-wrapper">
+          <i class="fa-solid fa-wheat-awn-circle-exclamation partner-icon"></i>
+        </div>
+        <div class="partner-details">
+          <h4>Fournisseurs d'Équipements</h4>
+          <p>Partenaires technologiques pour l'aménagement des 102 unités.</p>
+        </div>
+      </div>
+
+      <!-- Partenaire 3 : Financier / GIE -->
+      <div class="partner-card">
+        <div class="partner-badge">Financier & GIE</div>
+        <div class="partner-logo-wrapper">
+          <i class="fa-solid fa-shield-halved partner-icon"></i>
+        </div>
+        <div class="partner-details">
+          <h4>GIE & Structures Affiliées</h4>
+          <p>Réseaux de microfinance, fonds de garantie et coopératives agrées.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- BANDEAU DÉFILANT / APERÇU DE LOGOS (OPTIONAL LOGO TICKER) -->
+    <div class="partners-ticker">
+      <div class="ticker-track">
+        <span class="ticker-item"><i class="fa-solid fa-building"></i> MINADER</span>
+        <span class="ticker-item"><i class="fa-solid fa-cow"></i> MINEPIA</span>
+        <span class="ticker-item"><i class="fa-solid fa-landmark"></i> Crédit Agricole</span>
+        <span class="ticker-item"><i class="fa-solid fa-tractor"></i> AGRO-TECH</span>
+        <span class="ticker-item"><i class="fa-solid fa-building"></i> MINADER</span>
+        <span class="ticker-item"><i class="fa-solid fa-cow"></i> MINEPIA</span>
+      </div>
+    </div>
+
+    <!-- BOUTON D'ACCÈS À LA PAGE COMPLÈTE DES PARTENAIRES -->
+    <div class="partners-action-footer text-center">
+      <a href="partenaires.html" class="btn btn-primary-dark">
+        <i class="fa-solid fa-network-wired"></i> Découvrir tous nos partenaires
+      </a>
+    </div>
+
+  </div>
+</section>
+
+  <!-- ==================== FOOTER MAGNIFIQUE ==================== -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-col brand-col">
+        <div class="logo-container light">
+          <div class="logo-icon"><i class="fa-solid fa-earth-africa"></i></div>
+          <span class="brand-title">PADDAC</span>
+        </div>
+        <p>Programme d'Appui pour le Développement Durable de l'Afrique Centrale. Une vision souveraine pour l'avenir agropastoral et industriel.</p>
+        <!-- Coordonnées -->
+        <div class="footer-coords">
+          <p><i class="fa-solid fa-location-dot"></i> Yaoundé, République du Cameroun</p>
+          <p><i class="fa-solid fa-envelope"></i> contact@paddac-ac.org</p>
+          <p><i class="fa-solid fa-phone"></i> +237 6XX XX XX XX</p>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#a-propos">À Propos</a></li>
+          <li><a href="#iaac">Projet IAAC</a></li>
+          <li><a href="#actualites">Actualités</a></li>
+          <li><a href="#documents">Documents</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Réseaux Sociaux</h4>
+        <div class="footer-social-links">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+          <a href="#"><i class="fa-brands fa-tiktok"></i> TikTok</a>
+          <a href="#"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+          <a href="#"><i class="fa-brands fa-youtube"></i> YouTube</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Mentions Légales</h4>
+        <p>Récépissé RDA N° 00001316/RDA/J06/BAPP</p>
+        <p>&copy; 2026 PADDAC. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== WIDGET FLOTTANT SUPPORT / CHAT ==================== -->
+<div class="support-widget" id="supportWidget">
+  <!-- Menu d'options rapides de support (Masqué par défaut) -->
+  <div class="support-popover" id="supportPopover">
+    <div class="support-header">
+      <div class="support-avatar">
+        <i class="fa-solid fa-headset"></i>
+      </div>
+      <div class="support-meta">
+        <strong>Support Client PADDAC</strong>
+        <span><i class="fa-solid fa-circle text-success"></i> En ligne 24/7</span>
+      </div>
+    </div>
+    <div class="support-body">
+      <p>Bonjour ! 👋 Comment pouvons-nous vous aider aujourd'hui ?</p>
+      <a href="https://wa.me/237000000000?text=Bonjour%20le%20support%20PADDAC,%20j'ai%20une%20question." target="_blank" class="support-option whatsapp">
+        <i class="fa-brands fa-whatsapp"></i> Chatter sur WhatsApp
+      </a>
+      <a href="tel:+237000000000" class="support-option call">
+        <i class="fa-solid fa-phone"></i> Appel Direct Hotline
+      </a>
+    </div>
+  </div>
+
+  <!-- Bouton Principal du Support -->
+  <button class="support-trigger-btn" onclick="toggleSupportPopover()" aria-label="Discuter avec le support">
+    <i class="fa-solid fa-comments icon-open"></i>
+    <i class="fa-solid fa-xmark icon-close"></i>
+    <span class="support-badge-pulse"></span>
+  </button>
+</div>
+
+<!-- ==================== BOTTOM NAVIGATION BAR (MOBILE PWA) ==================== -->
+<nav class="mobile-bottom-nav" id="mobileBottomNav">
+  <a href="#hero" class="nav-item active">
+    <div class="nav-icon"><i class="fa-solid fa-house"></i></div>
+    <span class="nav-label">Accueil</span>
+  </a>
+  <a href="#produits-marketplace" class="nav-item">
+    <div class="nav-icon">
+      <i class="fa-solid fa-store"></i>
+      <span class="cart-count-badge">10</span>
+    </div>
+    <span class="nav-label">Boutique</span>
+  </a>
+  <a href="#secteurs" class="nav-item">
+    <div class="nav-icon"><i class="fa-solid fa-layer-group"></i></div>
+    <span class="nav-label">Secteurs</span>
+  </a>
+  <a href="#partenaires" class="nav-item">
+    <div class="nav-icon"><i class="fa-solid fa-handshake"></i></div>
+    <span class="nav-label">Partenaires</span>
+  </a>
+  <a href="javascript:void(0)" class="nav-item" onclick="toggleSupportPopover()">
+    <div class="nav-icon"><i class="fa-solid fa-headset"></i></div>
+    <span class="nav-label">Support</span>
+  </a>
+</nav>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
